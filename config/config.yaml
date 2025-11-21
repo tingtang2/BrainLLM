@@ -1,9 +1,9 @@
 task_name: Brain_to_text_two_stage
 
-encoder_checkpoint: /GPFS/data/shengfeng-1/BrainLlama/checkpoints_pretrain
+encoder_checkpoint:  /burg-archive/stats/users/zc2666/BrainLlama/checkpoints_pretrain
 
 data_config:
-  data_path: /GPFS/data/shengfeng-1/MultiModal/tfRecords/tfRecords_bpe_100
+  data_path: /burg-archive/stats/users/zc2666/derived/tfRecords/
   sigma: 2
   white_noise_sd: 0.8
   constant_offset_sd: 0.2
@@ -40,7 +40,7 @@ finetune_config:
   patience: 10
 
   save_checkpoint: True
-  checkpoint_path: /GPFS/data/shengfeng-1/BrainLlama/checkpoints_llama2_7b
+  checkpoint_path: /burg-archive/stats/users/zc2666/BrainLlama/checkpoints_llama2_7b
 
   lr_encoder: -1
   lr_linear: 0.001
@@ -72,7 +72,7 @@ train_config:
   patience: 40
 
   save_checkpoint: True
-  checkpoint_path: /GPFS/data/shengfeng-1/BrainLlama/checkpoints_llama2_7b
+  checkpoint_path: /burg-archive/stats/users/zc2666/BrainLlama/checkpoints_llama2_7b
 
   lr_encoder: 0.001
   lr_linear: 0.001
@@ -91,7 +91,7 @@ pretrain_config:
   patience: 40
 
   save_checkpoint: True
-  checkpoint_path: /GPFS/data/shengfeng-1/BrainLlama/checkpoints_pretrain
+  checkpoint_path: /burg-archive/stats/users/zc2666/BrainLlama/checkpoints_pretrain
 
   lr_encoder: 0.02
   eps: 0.1
